@@ -21,7 +21,12 @@
     define( 'DB_HOST', 'localhost' );
     ```
 
-5. In the root of your project folder run `wp core install --url=yoursiteurl.test --title="Your site title" --admin_user=admin --admin_password=admin --admin_email=you@youremail.com --skip-themes`
+5. In the root of your project folder run:
+
+    ```bash
+    wp core install --url=yoursiteurl.test --title="Your site title" --admin_user=admin --admin_password=admin --admin_email=you@youremail.com --skip-themes
+    ```
+
 6. Navigate to the url you passed to the install command. Use the user and password you passed to the command at `yoursite.url/wp-admin` to login to the dashboard.
 
 ## Installing the Theme
