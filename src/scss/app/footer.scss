@@ -1,0 +1,7 @@
+.site-footer {
+	@apply bg-black text-white py-12;
+	&__grid {
+		@apply grid lg:grid-cols-2 lg:gap-12 mb-8;
+	}
+	&__left {}
+}

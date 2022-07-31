@@ -1,0 +1,7 @@
+:root {
+	--container-width: calc(100% - 32px);
+	--container-max-width: 100%;
+}
+.container {
+	width: var(--container-width);
+}

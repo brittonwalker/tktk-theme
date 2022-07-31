@@ -1,0 +1,29 @@
+// Tailwind Styles
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Typography
+@import './app/typography.scss';
+
+// Component Styles
+@import './app/animations.scss';
+@import './app/article.scss';
+@import './app/banner.scss';
+@import './app/buttons.scss';
+@import './app/container.scss';
+@import './app/content.scss';
+@import './app/footer.scss';
+@import './app/header.scss';
+@import './app/hero-centered.scss';
+@import './app/hero-full.scss';
+@import './app/hero-split.scss';
+@import './app/modal.scss';
+@import './app/page-transition.scss';
+@import './app/post-grid-row.scss';
+@import './app/post-grid.scss';
+@import './app/post-tease.scss';
+
+.sample {
+	@apply bg-black text-white rounded-2xl min-h-[200px] flex justify-center items-center text-2xl transition-colors duration-300 hover:bg-gray-900;
+}
