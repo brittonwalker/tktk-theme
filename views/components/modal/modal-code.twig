@@ -1,0 +1,22 @@
+{# Container with modal button #}
+<div class="container py-12">
+	<div class="flex justify-center flex-col text-center">
+		<h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">TKTK modal button</h1>
+		<p class="mt-3 mb-6 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-auto">TKTK is a starter WordPress theme to get you up and going fast. It uses Timber, Twig, and Tailwindcss to get you running at full speed. Check out the components page to see more some standard frontend components or get started building your own!</p>
+		<div class="modal-btn flex justify-center">
+			<button class="btn btn--dark js-modal-trigger" data-modal-trigger="modal-1">Modal Button</button>
+		</div>
+	</div>
+</div>
+
+{# The Modal #}
+<div class="modal" id="modal-1">
+	<div class="modal__inner">
+		<h3 class="text-3xl tracking-tight font-extrabold">Modal heading</h3>
+		<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic id deleniti officia quo eos ipsa magnam maiores sit, velit fugiat blanditiis quasi porro consequatur debitis! Ipsam inventore aut ea earum.</p>
+		<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic id deleniti officia quo eos ipsa magnam maiores sit, velit fugiat blanditiis quasi porro consequatur debitis!</p>
+		<button class="modal__close">
+			{% include 'svg/close.twig' %}
+		</button>
+	</div>
+</div>

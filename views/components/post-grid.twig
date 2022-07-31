@@ -1,0 +1,23 @@
+<div class="post-grid">
+	<div class="container">
+		<div class="post-grid__grid post-grid__grid--cols-{{ columns }}">
+			{% for i in 1..columns %}
+				<div class="post-tease">
+					<a class="post-tease__card" href="{{ site.link }}">
+						<div class="post-tease__img">
+							<img src="https://source.unsplash.com/1600x900" alt="">
+						</div>
+						<div class="post-tease__content">
+							<div class="post-tease__title">
+								<h5>Post title</h5>
+							</div>
+							<div class="post-tease__desc">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet laboriosam maiores eligendi nesciunt molestiae debitis incidunt velit facilis quam.</p>
+							</div>
+						</div>
+					</a>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>

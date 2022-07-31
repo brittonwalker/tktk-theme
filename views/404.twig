@@ -1,0 +1,21 @@
+{% extends "base.twig" %}
+
+{% set messages = [
+	"You don't have to go home...but you can't stay here.",
+	"Where we're going, we don't need roads.",
+	"We'd like to talk about your car's extended warranty.",
+	"Well...this is awkward.",
+	"This page isn't here and perhaps it never was.",
+	"Friday should be in the Criterion Collection. Just sayin.",
+	"No act of kindness, no matter how small, is ever wasted.",
+]%}
+
+{% block content %}
+	<div class="container">
+		<div class="404 py-32 text-center">
+			<h1 class="display-max w-fit mx-auto">404</h1>
+			<p class="w-fit mx-auto mt-8 mb-10 text-4xl">{{ random(messages) }}</p>
+			<a href="{{ site.link }}" class="btn btn--dark w-fit mx-auto text-4xl">Go Home</a>
+		</div>
+	</div>
+{% endblock %}
