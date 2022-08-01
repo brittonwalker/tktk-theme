@@ -4,7 +4,7 @@
 
 import Headroom from 'headroom.js';
 
-class Header {
+export default class Header {
   constructor() {
     this.el = document.querySelector('header');
     this.options = {
@@ -18,5 +18,3 @@ class Header {
     headroom.init();
   }
 }
-
-const header = new Header();

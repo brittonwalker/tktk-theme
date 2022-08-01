@@ -4,11 +4,10 @@
 
 import barba from '@barba/core';
 import { gsap, Power2 } from 'gsap';
-import FadeInText from './FadeInText';
-import Run from './Run';
 
-class PageTransition {
-  constructor() {
+export default class PageTransition {
+  constructor(experience) {
+    this.experience = experience;
     this.transitionEl = document.querySelector('.page-transition');
     this.text = this.transitionEl.querySelector('.page-transition__loading');
     document.addEventListener('DOMContentLoaded', () => this.init());
@@ -41,7 +40,7 @@ class PageTransition {
               duration: 1,
               ease: Power2.easeInOut,
               onComplete: () => {
-                window.headerMenu.out();
+                this.experience.menu.out();
               },
             });
           },
@@ -56,16 +55,13 @@ class PageTransition {
               duration: 1,
               delay: 0.5,
               ease: Power2.easeInOut,
-              onComplete: () => {
-                new FadeInText();
-              },
             });
           },
 
           after: (data) => {
             const { trigger } = data;
 
-            new Run();
+            this.experience.init();
             window.scrollTo(0, 0);
           },
         },
@@ -73,4 +69,3 @@ class PageTransition {
     });
   }
 }
-new PageTransition();

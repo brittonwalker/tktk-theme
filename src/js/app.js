@@ -1,8 +1,3 @@
-import './app/PageTransition';
-import FadeInText from './app/FadeInText';
-import Menu from './app/Menu';
-import Run from './app/Run';
+import Experience from './app/Experience';
 
-window.headerMenu = new Menu();
-new Run();
-new FadeInText();
+const experience = new Experience();
