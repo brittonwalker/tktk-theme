@@ -3,7 +3,7 @@
 
 1. [Setting up your WordPress with Laravel Valet](#setting-up-your-wordPress-with-laravel-valet)
 2. [Installing the Theme](#Installing-the-Theme)
-3. [Starting your development](#Starting-your-development)
+3. [Starting your development](#setup)
 4. [What's here?](#What's-here)
 5. [Resources](#resources)
 
@@ -45,25 +45,31 @@ Install this theme as you would any other, and be sure the Timber plugin is acti
 4. Activate the theme in Appearance >  Themes.
 5. Do your thing! And read [the docs for Timber](https://timber.github.io/docs/). Check out [TKTK components](https://tktk.brittonwalker.site/components/).
 
-## Starting your development
+## Setup
 
-1. Install dependencies:
+From the command line, change directories to your new theme directory:
 
-    ```bash
-    npm install
-    ```
+```bash
+cd /wp-content/themes/your-theme
+```
 
-2. Start watch task for asset development:
+Install theme dependencies and trigger an initial build.
 
-    ```bash
-    npm run start
-    ```
+```bash
+npm install
+```
 
-3. To build your final assets:
+### Development
 
-    ```bash
-    npm run build
-    ```
+From the command line, type any of the following to perform an action:
+
+Command | Action
+:- | :-
+`npm run watch` | Builds assets and starts Live Reload and Browsersync servers
+`npm run start` | Builds assets and starts Live Reload server
+`npm run build` | Builds production-ready assets for a deployment
+`npm run lint` | Check all CSS, JS, MD, and PHP files for errors
+`npm run format` | Fix all CSS, JS, MD, and PHP formatting errors automatically
 
 ## What's here?
 
