@@ -5,7 +5,8 @@
   "author": "Britton Walker",
   "license": "GPL-2.0-or-later",
   "keywords": [
-    "wordpress"
+    "WordPress",
+    "Theme"
   ],
   "homepage": "https://github.com/brittonwalker/tktk-theme#readme",
   "repository": {
@@ -15,9 +16,14 @@
   "bugs": {
     "url": "https://github.com/brittonwalker/tktk-theme/issues"
   },
+  "engines": {
+    "node": ">=14",
+    "npm": ">=7"
+  },
   "main": "index.js",
   "dependencies": {
-    "@barba/core": "^2.9.7"
+    "@barba/core": "^2.9.7",
+    "split-type": "^0.3.2"
   },
   "devDependencies": {
     "@wordpress/eslint-plugin": "^13.0.0",
