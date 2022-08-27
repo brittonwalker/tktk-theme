@@ -1,4 +1,5 @@
 .hero-split {
+	$self: &;
 	@apply relative bg-white overflow-hidden min-h-[50vh] flex items-center;
 	&__grid {
 		@apply grid grid-cols-1 lg:grid-cols-2 py-12;
@@ -11,10 +12,10 @@
 		@apply sm:text-center lg:text-left flex items-center order-2 lg:order-1;
 	}
 	&--img-left {
-		.hero-split__img {
+		#{ $self }__img {
 			@apply order-1 lg:order-1;
 		}
-		.hero-split__text {
+		#{ $self }__text {
 			@apply order-2 lg:order-2;
 		}
 	}

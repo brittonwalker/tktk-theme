@@ -1,29 +1,25 @@
 // Tailwind Styles
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 // Typography
-@import './app/typography.scss';
+@import './app/typography';
 
 // Component Styles
-@import './app/animations.scss';
-@import './app/article.scss';
-@import './app/banner.scss';
-@import './app/buttons.scss';
-@import './app/container.scss';
-@import './app/content.scss';
-@import './app/footer.scss';
-@import './app/header.scss';
-@import './app/hero-centered.scss';
-@import './app/hero-full.scss';
-@import './app/hero-split.scss';
-@import './app/modal.scss';
-@import './app/page-transition.scss';
-@import './app/post-grid-row.scss';
-@import './app/post-grid.scss';
-@import './app/post-tease.scss';
-
-.sample {
-	@apply bg-black text-white rounded-2xl min-h-[200px] flex justify-center items-center text-2xl transition-colors duration-300 hover:bg-gray-900;
-}
+@import './app/animations';
+@import './app/article';
+@import './app/banner';
+@import './app/buttons';
+@import './app/container';
+@import './app/content';
+@import './app/footer';
+@import './app/header';
+@import './app/hero-centered';
+@import './app/hero-full';
+@import './app/hero-split';
+@import './app/modal';
+@import './app/page-transition';
+@import './app/post-grid-row';
+@import './app/post-grid';
+@import './app/post-tease';
