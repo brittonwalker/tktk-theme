@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 wp.domReady(() => {
   wp.blocks.registerBlockStyle('core/image', {
     name: 'float-left',

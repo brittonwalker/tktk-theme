@@ -29,10 +29,7 @@ export default class PageTransition {
       transitions: [
         {
           name: 'default-transition',
-          leave: (data) => {
-            const { trigger, current } = data;
-            const { container } = current;
-
+          leave: () => {
             gsap.set(this.transitionEl, { xPercent: 0, width: 0 });
 
             return gsap.to(this.transitionEl, {
@@ -45,11 +42,7 @@ export default class PageTransition {
             });
           },
 
-          enter: (data) => {
-            const { trigger } = data;
-          },
-
-          afterEnter: (data) => {
+          afterEnter: () => {
             gsap.to(this.transitionEl, {
               xPercent: 100,
               duration: 1,
@@ -58,9 +51,7 @@ export default class PageTransition {
             });
           },
 
-          after: (data) => {
-            const { trigger } = data;
-
+          after: () => {
             this.experience.init();
             window.scrollTo(0, 0);
           },
