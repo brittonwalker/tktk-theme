@@ -1,4 +1,13 @@
 <?php
+/**
+ * Implements Setup class
+ *
+ *  @package tktk-theme
+ */
+
+namespace TKTK;
+
+use Twig;
 
 /**
  * We're going to configure our theme inside of a subclass of Timber\Site
@@ -10,7 +19,7 @@ class Setup {
 		add_action( 'after_setup_theme', array( $this, 'theme_supports' ) );
 		add_filter( 'timber/twig', array( $this, 'add_to_twig' ) );
 	}
-
+	/** Add theme supports. */
 	public function theme_supports() {
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );

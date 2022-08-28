@@ -20,10 +20,6 @@ const isInViewport = (element, threshold = 0) => {
   return vertInView && horInView;
 };
 
-const triggerTransitionEnd = (element) => {
-  element.dispatchEvent(new Event(TRANSITION_END));
-};
-
 const isElement = (obj) => {
   if (!obj || typeof obj !== 'object') {
     return false;
@@ -48,7 +44,6 @@ const setViewportUnit = () => {
 // wrapType - type of wrapper ('div', 'span' etc)
 // wrapClass - wrapper class(s)
 const wrapLines = (elems, wrapType, wrapClass) => {
-  console.log(elems);
   elems.forEach((char) => {
     // add a wrap for every char (overflow hidden)
     const wrapEl = document.createElement(wrapType);
@@ -58,11 +53,4 @@ const wrapLines = (elems, wrapType, wrapClass) => {
   });
 };
 
-export {
-  isInViewport,
-  isVisible,
-  triggerTransitionEnd,
-  isElement,
-  setViewportUnit,
-  wrapLines,
-};
+export { isInViewport, isVisible, isElement, setViewportUnit, wrapLines };

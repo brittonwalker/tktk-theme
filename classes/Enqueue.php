@@ -1,5 +1,16 @@
 <?php
+/**
+ * Implements Enqueue class for tktk-theme assets
+ *
+ *  @package tktk-theme
+ */
 
+namespace TKTK;
+
+/**
+ * This ensures that Timber is loaded and available as a PHP class.
+ * If not, it gives an error message to help direct developers on where to activate
+ */
 class Enqueue {
 
 	/**
@@ -21,7 +32,6 @@ class Enqueue {
 	 * Public constructor
 	 */
 	public function __construct( $namespace ) {
-
 		$this->namespace = $namespace;
 
 		$this->url = get_stylesheet_directory_uri();
@@ -29,7 +39,7 @@ class Enqueue {
 		if ( $this->is_development() ) {
 			$this->version = time();
 		} else {
-			$theme = wp_get_theme();
+			$theme         = wp_get_theme();
 			$this->version = $theme->get( 'Version' );
 		}
 
@@ -37,7 +47,6 @@ class Enqueue {
 		add_action( 'wp_enqueue_scripts', array( $this, 'site_styles' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'site_scripts' ) );
 		add_action( 'enqueue_block_editor_assets', array( $this, 'editor_scripts' ) );
-
 	}
 
 	/**
@@ -46,20 +55,17 @@ class Enqueue {
 	 * @return boolean
 	 */
 	public function is_development() {
-
 		if ( strpos( get_site_url(), '.test' ) !== false ) {
 			return true;
 		}
 
 		return false;
-
 	}
 
 	/**
 	 * Admin Styles
 	 */
 	public function admin_styles() {
-
 		wp_enqueue_style(
 			"{$this->namespace}-admin",
 			"{$this->url}/admin-css/css/admin.css",
@@ -67,14 +73,12 @@ class Enqueue {
 			$this->version,
 			'screen'
 		);
-
 	}
 
 	/**
 	 * Editor Scripts
 	 */
 	public function editor_scripts() {
-
 		if ( $this->is_development() ) {
 			wp_enqueue_script(
 				$this->namespace,
@@ -125,7 +129,6 @@ class Enqueue {
 	 * Site Scripts
 	 */
 	public function site_scripts() {
-
 		if ( $this->is_development() ) {
 			wp_enqueue_script(
 				$this->namespace,
@@ -147,7 +150,6 @@ class Enqueue {
 				true
 			);
 		}
-		
 	}
 }
 new Enqueue( 'tktk' );
