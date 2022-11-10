@@ -35,12 +35,14 @@ class Enqueue {
 		$this->namespace = $namespace;
 
 		$this->url = get_stylesheet_directory_uri();
+		
+		$asset = include get_stylesheet_directory() . '/build/index.asset.php';
 
 		if ( $this->is_development() ) {
 			$this->version = time();
 		} else {
 			$theme         = wp_get_theme();
-			$this->version = $theme->get( 'Version' );
+			$this->version = is_array( $asset ) ? $asset['version'] : $theme->get( 'Version' );
 		}
 
 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_styles' ) );
@@ -90,13 +92,14 @@ class Enqueue {
 				true
 			);
 		} else {
+			$asset = include get_stylesheet_directory() . '/build/editor.asset.php';
 			wp_enqueue_script(
 				$this->namespace,
 				get_theme_file_uri( '/build/editor.js' ),
 				array(
 					'jquery',
 				),
-				false,
+				is_array( $asset ) ? $asset['version'] : false,
 				true
 			);
 		}
