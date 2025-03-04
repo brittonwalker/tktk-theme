@@ -57,6 +57,12 @@ class Setup {
 
         // Enable support for menus.
         add_theme_support( 'menus' );
+
+				register_nav_menus([
+					'primary'   => __('Primary Menu', 'tktk'),
+					'footer'    => __('Footer Menu', 'tktk'),
+					'social'    => __('Social Menu', 'tktk'),
+				]);
     }
 
     /** Custom Twig filter example */
