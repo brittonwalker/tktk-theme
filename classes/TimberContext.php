@@ -29,8 +29,6 @@ class TimberContext {
 			$context[$location] = $menu;
 		}
 
-		echo var_dump($context['social']); die;
-
 		return $context;
 	}
 
