@@ -24,9 +24,8 @@
     },
     "autoload": {
         "psr-4": {
-            "TKTK\\Theme\\": "./classes"
-        },
-        "files": []
+            "Tktk\\": "classes/"
+        }
     },
     "require-dev": {
         "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
