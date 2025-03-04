@@ -5,7 +5,7 @@ module.exports = {
   singleQuote: true,
   overrides: [
     {
-      files: '*.scss',
+      files: '*.css',
       options: {
         singleQuote: true,
       },

@@ -51,7 +51,6 @@ class Enqueue {
         add_action( 'admin_enqueue_scripts', [ $this, 'admin_styles' ] );
         add_action( 'wp_enqueue_scripts', [ $this, 'site_styles' ] );
         add_action( 'wp_enqueue_scripts', [ $this, 'site_scripts' ] );
-        add_action( 'enqueue_block_editor_assets', [ $this, 'editor_scripts' ] );
     }
 
     /**
@@ -64,23 +63,6 @@ class Enqueue {
             [],
             $this->version,
             'screen'
-        );
-    }
-
-    /**
-     * Editor Scripts
-     */
-    public function editor_scripts() {
-        $asset_path = get_stylesheet_directory() . '/build/editor.asset.php';
-        $asset      = file_exists( $asset_path ) ? include $asset_path : [];
-        $version    = is_array( $asset ) && isset( $asset['version'] ) ? $asset['version'] : time();
-
-        wp_enqueue_script(
-            $this->namespace,
-            get_theme_file_uri( '/build/editor.js' ),
-            [ 'jquery' ],
-            $version,
-            true
         );
     }
 

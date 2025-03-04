@@ -1,0 +1,26 @@
+.modal {
+  @apply fixed top-0 left-0 h-screen bg-black/30 w-full flex justify-center items-center pointer-events-none opacity-0 transition-opacity duration-300 z-10;
+
+  &.active {
+    @apply opacity-100 pointer-events-auto;
+  }
+
+  &__inner {
+    @apply rounded-3xl bg-white p-8 w-[560px] relative;
+    max-width: calc(100% - 32px);
+
+    p {
+      @apply mt-4;
+    }
+  }
+
+  &__close {
+    @apply absolute top-0 right-0 p-4;
+  }
+}
+
+body {
+  &.js-modal-open {
+    @apply overflow-hidden;
+  }
+}

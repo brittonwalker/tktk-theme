@@ -1,0 +1,41 @@
+/* Tailwind Styles */
+@import 'tailwindcss';
+
+@config '../../tailwind.config.js';
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+/* Typography */
+@import './app/typography';
+@import './app/animations';
+@import './app/article';
+@import './app/banner';
+@import './app/buttons';
+@import './app/container';
+@import './app/content';
+@import './app/footer';
+@import './app/header';
+@import './app/hero-centered';
+@import './app/hero-full';
+@import './app/hero-split';
+@import './app/modal';
+@import './app/page-transition';
+@import './app/post-grid-row';
+@import './app/post-grid';
+@import './app/post-tease';
