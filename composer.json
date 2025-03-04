@@ -11,7 +11,7 @@
     ],
     "config": {
         "platform": {
-            "php": "7.4"
+            "php": "8.2.27"
         },
         "allow-plugins": {
             "composer/installers": true,
@@ -19,13 +19,13 @@
         }
     },
     "require": {
-        "composer/installers": "^2.0.0"
+        "composer/installers": "^2.0.0",
+        "timber/timber": "^2.3"
     },
     "autoload": {
         "psr-4": {
-            "TKTK\\Theme\\": "./classes"
-        },
-        "files": []
+            "Tktk\\": "classes/"
+        }
     },
     "require-dev": {
         "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
