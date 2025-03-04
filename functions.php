@@ -10,6 +10,7 @@
 use Timber\Timber;
 use Tktk\Setup;
 use Tktk\Enqueue;
+use Tktk\TimberContext;
 
 // Load Composer dependencies
 if ( file_exists(__DIR__ . '/vendor/autoload.php') ) {
@@ -27,3 +28,4 @@ if ( class_exists(Timber::class) ) {
 
 new Setup();
 new Enqueue( 'tktk' );
+new TimberContext();
