@@ -31,7 +31,7 @@
 <div class="menu">
 	<div class="menu__inner">
 		<ul>
-		{% for item in menu.primary.get_items %}
+		{% for item in primary.get_items %}
 			<li class="{{ item.classes | join(' ') }}">
 				<a class="mobile-nav-item" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
 			</li>
