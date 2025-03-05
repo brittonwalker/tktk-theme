@@ -1,0 +1,26 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<div class="hero-full bg-black text-white">
+		<div class="hero-full__bg"></div>
+		<div class="hero-full__content">
+			<div class="container">
+				<h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">{{ post.title }}</h1>
+				<p class="mt-3 text-base sm:text-lg sm:mx-auto md:text-xl lg:mx-0">These componenets are meant to get you started.</p>
+			</div>
+		</div>
+	</div>
+	{% include 'components/section/title.twig' with { title: 'Table of Contents' } %}
+	<div class="container">
+		<div class="toc mb-28">
+			<ol class="list-decimal list-inside text-2xl">
+				<li class="mb-2"><a class="hover:border-b-2 border-black" href="#accordions">Accordions</a></li>
+			</ol>
+		</div>
+	</div>
+
+	{# {% include 'components/page-elevator/page-elevator.twig' %} #}
+
+	{% include 'components/section/title.twig' with { title: 'Accordions' } %}
+	{% include 'components/accordion/code.twig' %}
+{% endblock %}

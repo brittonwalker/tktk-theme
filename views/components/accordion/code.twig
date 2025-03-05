@@ -1,0 +1,19 @@
+<div class="code-block">
+	{% include 'components/code-block/header.twig' with { title: 'Accordion' } %}
+	<div class="code-block__preview">
+		{% include 'components/accordion/accordion.twig' %}
+	</div>
+	<div class="code-block__container code-block__hidden">
+		<div class="code-block__wrapper">
+			<div class="code-block__highlight">
+				<div class="code-block__btn js-lang-tab active" data-lang-btn="markup">HTML</div>
+				<div class="code-block__btn js-lang-tab" data-lang-btn="scss">CSS</div>
+				<div class="code-block__btn js-lang-tab" data-lang-btn="js">JS</div>
+				<button type="button" name="copy code to clipboard" class="code-block__btn js-copy-btn">Copy</button>
+			</div>
+		</div>
+		<pre class="active" data-lang="markup"><code class="language-twig">{{ source('components/accordion/accordion.twig')|raw|e('esc_html') }}</code></pre>
+		<pre data-lang="scss" data-src="{{ theme.link }}/src/css/app/accordion.css"></pre>
+		<pre data-lang="js" data-src="{{ theme.link }}/src/js/app/Accordion.js"></pre>
+	</div>
+</div>

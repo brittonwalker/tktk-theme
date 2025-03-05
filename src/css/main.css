@@ -5,6 +5,8 @@
 
 /* Vendor */
 @import 'lenis/dist/lenis.css';
+@import 'prismjs/themes/prism.min.css';
+@import 'prismjs/themes/prism-okaidia.min.css';
 
 /* Typography */
 @import './app/typography';
@@ -24,6 +26,8 @@
 @import './app/post-grid-row';
 @import './app/post-grid';
 @import './app/post-tease';
+@import './app/codeblock';
+@import './app/accordion';
 
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,

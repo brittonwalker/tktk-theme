@@ -7,6 +7,9 @@ import PageTransition from './app/PageTransition';
 import ProgressBar from './app/ProgressBar';
 import ScrollAnimations from './app/ScrollAnimation';
 import SmoothScroll from './app/SmoothScroll';
+import CodeHighlight from './app/CodeHighlight';
+import Accordions from './app/Accordion';
+import CodeTabs from './app/CodeTabs';
 
 class App {
   static instance = null;
@@ -33,6 +36,9 @@ class App {
     this.scrollAnimations = new ScrollAnimations();
     this.fadeIn = new FadeIn();
     this.scroll = new SmoothScroll();
+    this.codeHighlight = new CodeHighlight();
+    this.accordions = new Accordions();
+    this.codeTabs = new CodeTabs();
   }
 }
 
