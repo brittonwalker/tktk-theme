@@ -5,16 +5,16 @@
 				<a class="hdr-logo-link" href="{{ site.url }}" rel="home">TKTK</a>
 			</h1>
 			<nav id="nav-main" class="header__nav" role="navigation">
-				{% if menu.primary %}
+				{% if primary %}
 					<ul class="header__nav-list">
-					{% for item in menu.primary.get_items %}
+					{% for item in primary.get_items %}
 						<li class="{{ item.classes | join(' ') }}">
 							<a class="header__nav-link" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
 						</li>
 					{% endfor %}
 					</ul>
 				{% endif %}
-				{# {% include "menu.twig" with {'items': menu.get_items} %} #}
+				{% include "menu.twig" with {'items': primary.get_items} %}
 			</nav><!-- #nav -->
 			<div class="menu__trigger">
                 <button class="menu-button" id="menu">
