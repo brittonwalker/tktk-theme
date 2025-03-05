@@ -3,6 +3,9 @@
 
 @config '../../tailwind.config.js';
 
+/* Vendor */
+@import 'lenis/dist/lenis.css';
+
 /* Typography */
 @import './app/typography';
 @import './app/animations';

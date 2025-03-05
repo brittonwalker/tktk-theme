@@ -25,6 +25,7 @@
     "@barba/core": "^2.10.3",
     "gsap": "^3.12.7",
     "headroom.js": "^0.12.0",
+    "lenis": "^1.2.1",
     "split-type": "^0.3.4"
   },
   "devDependencies": {
