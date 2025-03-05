@@ -6,6 +6,7 @@ import Modal from './app/Modal';
 import PageTransition from './app/PageTransition';
 import ProgressBar from './app/ProgressBar';
 import ScrollAnimations from './app/ScrollAnimation';
+import Scroll from './app/Scroll';
 
 let instance = null;
 
@@ -31,6 +32,7 @@ class App {
     this.modal = new Modal();
     this.scrollAnimations = new ScrollAnimations();
     this.fadeIn = new FadeIn();
+    this.scroll = new Scroll();
   }
 }
 
