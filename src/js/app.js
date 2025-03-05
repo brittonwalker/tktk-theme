@@ -6,17 +6,17 @@ import Modal from './app/Modal';
 import PageTransition from './app/PageTransition';
 import ProgressBar from './app/ProgressBar';
 import ScrollAnimations from './app/ScrollAnimation';
-import Scroll from './app/Scroll';
-
-let instance = null;
+import SmoothScroll from './app/SmoothScroll';
 
 class App {
-  constructor() {
-    if (instance) {
-      return instance;
-    }
+  static instance = null;
 
-    instance = this;
+  constructor() {
+    if (App.instance) {
+      return App.instance;
+    }
+    App.instance = this;
+
     window.experience = this;
 
     this.header = new Header();
@@ -32,7 +32,7 @@ class App {
     this.modal = new Modal();
     this.scrollAnimations = new ScrollAnimations();
     this.fadeIn = new FadeIn();
-    this.scroll = new Scroll();
+    this.scroll = new SmoothScroll();
   }
 }
 

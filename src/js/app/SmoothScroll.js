@@ -1,6 +1,6 @@
 import Lenis from 'lenis';
 
-export default class Scroll {
+export default class SmoothScroll {
   constructor() {
     this.lenis = new Lenis({
       autoRaf: true,
