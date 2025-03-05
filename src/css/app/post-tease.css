@@ -1,12 +1,12 @@
 .post-tease {
-	@apply rounded-3xl overflow-hidden border border-black;
-	&__card {
-		@apply flex flex-col;
-	}
-	&__title {
-		@apply text-gray-900 text-xl font-medium mb-2;
-	}
-	&__content {
-		@apply pt-4 px-4 pb-16;
-	}
+  @apply rounded-3xl overflow-hidden border border-black;
+  &__card {
+    @apply flex flex-col;
+  }
+  &__title {
+    @apply text-gray-900 text-xl font-medium mb-2;
+  }
+  &__content {
+    @apply pt-4 px-4 pb-16;
+  }
 }

@@ -1,25 +1,25 @@
 .banner {
-	@apply mt-[56px] bg-gray-300 overflow-hidden transition-all duration-300;
+  @apply mt-[56px] bg-gray-300 overflow-hidden transition-all duration-300;
 
-	&--closed {
-		height: 0;
-	}
-	&__container {
-		@apply container relative;
-	}
-	&__inner {
-		@apply lg:text-center lg:px-12 my-4;
-	}
-	&__close {
-		@apply absolute top-0 right-0;
-	}
+  &--closed {
+    height: 0;
+  }
+  &__container {
+    @apply container relative;
+  }
+  &__inner {
+    @apply lg:text-center lg:px-12 my-4;
+  }
+  &__close {
+    @apply absolute top-0 right-0;
+  }
 
-	a {
-		@apply relative;
-		&::after {
-			content: '';
-			@apply h-[2px] w-full absolute left-0 bg-black;
-			top: calc(100% + 2px);
-		}
-	}
+  a {
+    @apply relative;
+    &::after {
+      content: '';
+      @apply h-[2px] w-full absolute left-0 bg-black;
+      top: calc(100% + 2px);
+    }
+  }
 }
