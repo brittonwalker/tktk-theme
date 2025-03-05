@@ -9,6 +9,12 @@
 		"no-descending-specificity": null,
 		"rule-empty-line-before": null,
 		"declaration-property-unit-allowed-list": null,
+		"selector-class-pattern": [
+			"^([a-z]+(-[a-z]+)*(__[a-z]+(-[a-z]+)*)?(--[a-z]+(-[a-z]+)*)?)$",
+			{
+				"message": "Class names should follow the BEM convention: block, block__element, block--modifier."
+			}
+		],
 		"at-rule-no-unknown": [
 			true,
 			{
