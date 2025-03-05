@@ -1,16 +1,12 @@
 {
 	"extends": [
-		"@wordpress/stylelint-config/scss",
-		"stylelint-config-prettier"
+		"@wordpress/stylelint-config"
 	],
 	"rules": {
 		"at-rule-empty-line-before": null,
-		"declaration-colon-newline-after": null,
 		"declaration-no-important": true,
-		"function-parentheses-space-inside": null,
 		"no-descending-specificity": null,
 		"rule-empty-line-before": null,
-		"selector-pseudo-class-parentheses-space-inside": null,
 		"declaration-property-unit-allowed-list": null,
 		"scss/at-rule-no-unknown": [
 			true,
@@ -24,7 +20,6 @@
 					"screen"
 				]
 			}
-		],
-		"string-quotes": "single"
+		]
 	}
 }

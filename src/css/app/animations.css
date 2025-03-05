@@ -1,7 +1,9 @@
 .to-reveal {
-	opacity: 0;
-    transition: opacity .5s ease,transform 1s cubic-bezier(.1,.6,.4,1);
-	&.__revealed {
-		opacity: 1;
-	}
+  opacity: 0;
+  transition:
+    opacity 0.5s ease,
+    transform 1s cubic-bezier(0.1, 0.6, 0.4, 1);
+  &.__revealed {
+    opacity: 1;
+  }
 }

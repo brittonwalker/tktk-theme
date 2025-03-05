@@ -1,11 +1,11 @@
 .page-transition {
-	@apply fixed left-0 top-0 h-screen w-0 bg-black flex justify-center items-center overflow-hidden;
-	z-index: 9999;
-	&__loading {
-		@apply text-white text-4xl;
-	}
+  @apply fixed left-0 top-0 h-screen w-0 bg-black flex justify-center items-center overflow-hidden;
+  z-index: 9999;
+  &__loading {
+    @apply text-white text-4xl;
+  }
 }
 
 .fade-text-wrapper {
-	@apply overflow-hidden;
+  @apply overflow-hidden;
 }

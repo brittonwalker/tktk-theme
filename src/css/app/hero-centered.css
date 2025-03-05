@@ -1,15 +1,15 @@
 .hero-centered {
-	@apply relative my-12;
-	&__container {
-		@apply container bg-black text-white rounded-3xl overflow-hidden;
-	}
-	&__content {
-		@apply flex justify-center items-center flex-col;
-	}
-	&__grid {
-		@apply grid grid-cols-1 px-6 py-12 lg:py-24 lg:min-h-[600px];
-	}
-	&__heading {
-		@apply text-4xl tracking-tight font-extrabold sm:text-5xl md:text-6xl;
-	}
+  @apply relative my-12;
+  &__container {
+    @apply container bg-black text-white rounded-3xl overflow-hidden;
+  }
+  &__content {
+    @apply flex justify-center items-center flex-col;
+  }
+  &__grid {
+    @apply grid grid-cols-1 px-6 py-12 lg:py-24 lg:min-h-[600px];
+  }
+  &__heading {
+    @apply text-4xl tracking-tight font-extrabold sm:text-5xl md:text-6xl;
+  }
 }

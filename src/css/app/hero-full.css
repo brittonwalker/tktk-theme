@@ -1,14 +1,14 @@
 .hero-full {
-	@apply min-h-[400px] lg:min-h-[800px] overflow-hidden relative flex flex-col mb-12;
-	&__bg {
-		@apply absolute top-0 left-0 w-full h-full z-[-1];
-		img {
-			object-fit: cover;
-			height: 100%;
-			width: 100%;
-		}
-	}
-	&__content {
-		@apply mt-auto pb-8;
-	}
+  @apply min-h-[400px] lg:min-h-[800px] overflow-hidden relative flex flex-col mb-12;
+  &__bg {
+    @apply absolute top-0 left-0 w-full h-full z-[-1];
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  &__content {
+    @apply mt-auto pb-8;
+  }
 }

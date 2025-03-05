@@ -1,15 +1,15 @@
 .post-tease-row {
-	@apply overflow-hidden col-span-12 lg:col-span-8 lg:col-start-3 border-b py-4;
-	&:first-of-type {
-		@apply border-t;
-	}
-	&__card {
-		@apply lg:flex;
-	}
-	&__title {
-		@apply text-gray-900 text-xl font-medium mb-2;
-	}
-	&__img {
-		@apply rounded-lg overflow-hidden mb-2 lg:max-w-[200px] lg:mr-4 lg:mb-0;
-	}
+  @apply overflow-hidden col-span-12 lg:col-span-8 lg:col-start-3 border-b py-4;
+  &:first-of-type {
+    @apply border-t;
+  }
+  &__card {
+    @apply lg:flex;
+  }
+  &__title {
+    @apply text-gray-900 text-xl font-medium mb-2;
+  }
+  &__img {
+    @apply rounded-lg overflow-hidden mb-2 lg:max-w-[200px] lg:mr-4 lg:mb-0;
+  }
 }
