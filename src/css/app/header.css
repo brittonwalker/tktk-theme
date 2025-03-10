@@ -2,7 +2,7 @@
   .headroom {
     @apply lg:top-8;
 
-    &--top {
+    &.headroom--top {
       @apply top-[46px] lg:top-8;
     }
   }
@@ -13,29 +13,29 @@
   transition: transform 200ms linear;
   @apply fixed w-full py-4 bg-black text-white z-20 top-0;
 
-  &--pinned {
+  &.headroom--pinned {
     transform: translateY(0%);
   }
 
-  &--unpinned {
+  &.headroom--unpinned {
     transform: translateY(-100%);
   }
 }
 
 .header {
-  &__wrapper {
+  .header__wrapper {
     @apply flex justify-between;
   }
 
-  &__nav {
+  .header__nav {
     @apply hidden lg:block;
   }
 
-  &__nav-list {
+  .header__nav-list {
     @apply flex;
   }
 
-  &__nav-link {
+  .header__nav-link {
     @apply px-4;
     &:last-of-type {
       @apply pr-0;
@@ -45,21 +45,20 @@
 
 .menu {
   @apply pointer-events-none bg-black md:hidden fixed top-0 bottom-0 w-full transform duration-500 ease-in-out translate-x-[100%] z-10 lg:hidden;
-
-  &__inner {
-    @apply p-4 space-y-2 sm:px-3 flex flex-col justify-end h-full;
-  }
-
-  &__trigger {
-    @apply flex lg:hidden transform transition-all duration-300;
-  }
-
   .menu-item {
     @apply mb-4;
     &:last-of-type {
       @apply mb-0;
     }
   }
+}
+
+.menu__inner {
+  @apply p-4 space-y-2 sm:px-3 flex flex-col justify-end h-full;
+}
+
+.menu__trigger {
+  @apply flex lg:hidden transform transition-all duration-300;
 }
 
 .menu-active {

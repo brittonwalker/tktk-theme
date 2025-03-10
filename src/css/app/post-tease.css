@@ -1,12 +1,12 @@
 .post-tease {
   @apply rounded-3xl overflow-hidden border border-black;
-  &__card {
+  .post-tease__card {
     @apply flex flex-col;
   }
-  &__title {
+  .post-tease__title {
     @apply text-gray-900 text-xl font-medium mb-2;
   }
-  &__content {
+  .post-tease__content {
     @apply pt-4 px-4 pb-16;
   }
 }

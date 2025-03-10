@@ -5,7 +5,7 @@
     @apply opacity-100 pointer-events-auto;
   }
 
-  &__inner {
+  .modal__inner {
     @apply rounded-3xl bg-white p-8 w-[560px] relative;
     max-width: calc(100% - 32px);
 
@@ -14,7 +14,7 @@
     }
   }
 
-  &__close {
+  .modal__close {
     @apply absolute top-0 right-0 p-4;
   }
 }
