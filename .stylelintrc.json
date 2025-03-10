@@ -10,9 +10,9 @@
 		"rule-empty-line-before": null,
 		"declaration-property-unit-allowed-list": null,
 		"selector-class-pattern": [
-			"^([a-z]+(-[a-z]+)*(__[a-z]+(-[a-z]+)*)?(--[a-z]+(-[a-z]+)*)?)$",
+			"^([a-z]+(-[a-z]+)*)(__[a-z]+(-[a-z]+)*)?(--[a-z0-9]+(-[a-z0-9]+)*)?$",
 			{
-				"message": "Class names should follow the BEM convention: block, block__element, block--modifier."
+				"message": "Class names should follow the BEM convention: block, block__element, block--modifier, block__element--modifier. Modifiers can include numbers."
 			}
 		],
 		"at-rule-no-unknown": [

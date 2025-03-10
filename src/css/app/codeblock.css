@@ -1,21 +1,21 @@
 .code-block {
   @apply mb-12;
-  &__heading {
+  .code-block__heading {
     @apply text-4xl;
   }
-  &__top {
+  .code-block__top {
     @apply flex justify-between mb-4 border-b;
   }
-  &__highlight {
+  .code-block__highlight {
     @apply bg-[#272822] flex justify-end py-4 pr-4 rounded-t-md border-b border-b-white;
   }
-  &__container {
+  .code-block__container {
     @apply container;
   }
-  &__hidden {
+  .code-block__hidden {
     @apply hidden;
   }
-  &__btn {
+  .code-block__btn {
     @apply rounded-full bg-transparent text-white border border-white py-1 px-4 text-sm transition-colors duration-300 hover:cursor-pointer;
     &:hover,
     &.active {
@@ -35,13 +35,13 @@
 
 .toggle-switch {
   @apply flex justify-end mb-2;
-  &__wrapper {
+  .toggle-switch__wrapper {
     @apply inline-flex p-1 bg-gray-300 rounded-full w-auto relative;
   }
-  &__btn {
+  .toggle-switch__btn {
     @apply py-1 px-3 bg-transparent rounded-full relative z-10;
   }
-  &__observer {
+  .toggle-switch__observer {
     --oberserver-width: 0;
     @apply absolute top-[4px] py-1 px-3 bg-white rounded-full z-0 transition-all duration-300 ease-in-out;
     height: calc(100% - 8px);

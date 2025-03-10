@@ -1,13 +1,13 @@
 .hero-split {
   @apply relative bg-white overflow-hidden min-h-[50vh] flex items-center;
-  &__grid {
+  .hero-split__grid {
     @apply grid grid-cols-1 lg:grid-cols-2 py-12;
   }
-  &__img {
+  .hero-split__img {
     @apply rounded-xl overflow-hidden order-1 mb-4;
     @apply lg:order-2 lg:rounded-3xl lg:mb-0;
   }
-  &__text {
+  .hero-split__text {
     @apply sm:text-center lg:text-left flex items-center order-2 lg:order-1;
   }
   &--img-left {
@@ -18,7 +18,7 @@
 			@apply order-2 lg:order-2;
 		} */
   }
-  &__heading {
+  .hero-split__heading {
     @apply text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl;
   }
 }

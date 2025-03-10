@@ -3,13 +3,13 @@
   &:first-of-type {
     @apply border-t;
   }
-  &__card {
+  .post-tease-row__card {
     @apply lg:flex;
   }
-  &__title {
+  .post-tease-row__title {
     @apply text-gray-900 text-xl font-medium mb-2;
   }
-  &__img {
+  .post-tease-row__img {
     @apply rounded-lg overflow-hidden mb-2 lg:max-w-[200px] lg:mr-4 lg:mb-0;
   }
 }

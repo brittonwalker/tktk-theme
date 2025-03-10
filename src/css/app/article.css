@@ -25,7 +25,7 @@
 
 .article-header {
   @apply min-h-[800px] overflow-hidden relative flex flex-col mb-12;
-  &__bg {
+  .article-header__bg {
     @apply absolute top-0 left-0 w-full h-full z-[-1];
     img {
       object-fit: cover;
@@ -33,7 +33,7 @@
       width: 100%;
     }
   }
-  &__content {
+  .article-header__content {
     @apply mt-auto pb-8;
   }
 }

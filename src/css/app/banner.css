@@ -1,16 +1,16 @@
 .banner {
   @apply mt-[56px] bg-gray-300 overflow-hidden transition-all duration-300;
 
-  &--closed {
+  &.banner--closed {
     height: 0;
   }
-  &__container {
+  .banner__container {
     @apply container relative;
   }
-  &__inner {
+  .banner__inner {
     @apply lg:text-center lg:px-12 my-4;
   }
-  &__close {
+  .banner__close {
     @apply absolute top-0 right-0;
   }
 
