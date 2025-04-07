@@ -1,0 +1,33 @@
+@utility intro-type {
+  @apply text-[32px] lg:text-[40px] leading-[110%] tracking-normal;
+}
+
+@utility top-page {
+  top: var(--wp-admin--admin-bar--height, 0);
+}
+
+@utility heading-1 {
+  @apply leading-heading-1 tracking-heading-1 text-heading-1-mobile lg:text-heading-1-desktop;
+}
+@utility heading-2 {
+  @apply leading-heading-2 tracking-heading-2 text-heading-2-mobile lg:text-heading-2-desktop;
+}
+@utility heading-3 {
+  @apply leading-heading-3 tracking-heading-3 text-heading-3-mobile lg:text-heading-3-desktop;
+}
+@utility heading-4 {
+  @apply leading-heading-4 tracking-heading-4 text-heading-4-mobile lg:text-heading-4-desktop;
+}
+@utility heading-5 {
+  @apply leading-heading-5 tracking-heading-5 text-heading-5-mobile lg:text-heading-5-desktop;
+}
+@utility heading-6 {
+  @apply leading-heading-6 tracking-heading-6 text-heading-6-mobile lg:text-heading-6-desktop;
+}
+
+@utility body-1 {
+  @apply leading-body-1 tracking-body-1 text-body-1-mobile lg:text-body-1-desktop;
+}
+@utility body-2 {
+  @apply leading-body-2 tracking-body-2 text-body-2-mobile lg:text-body-2-desktop;
+}

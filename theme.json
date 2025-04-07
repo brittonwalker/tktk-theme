@@ -1,0 +1,181 @@
+{
+  "$schema": "https:\/\/schemas.wp.org\/trunk\/theme.json",
+  "version": 3,
+  "styles": {
+    "typography": {
+      "fontFamily": "var(--wp--custom--font--body)",
+      "fontSize": "var(--wp--custom--desktop--font-size--body-1)",
+      "lineHeight": "var(--wp--custom--line-height--body-1)"
+    },
+    "color": {
+      "text": "var(--wp--preset--color--black)",
+      "background": "var(--wp--preset--color--white)"
+    },
+    "elements": {}
+  },
+  "settings": {
+    "color": {
+      "custom": false,
+      "defaultPalette": false,
+      "gradients": [],
+      "customGradient": false,
+      "palette": [
+        {
+          "name": "black",
+          "slug": "black",
+          "color": "#000000"
+        },
+        {
+          "name": "White",
+          "slug": "white",
+          "color": "#ffffff"
+        }
+      ]
+    },
+    "layout": {
+      "contentSize": "840px",
+      "wideSize": "1200px"
+    },
+    "typography": {
+      "customFontSize": false,
+      "fontStyle": false,
+      "fontWeight": false,
+      "letterSpacing": false,
+      "lineHeight": false,
+      "textDecoration": false,
+      "textTransform": false,
+      "dropCap": false,
+      "fontSizes": [],
+      "fontFamilies": [
+        {
+          "fontFamily": "Neue Montreal",
+          "name": "Neue Montreal",
+          "slug": "neue-montreal",
+          "fontFace": [
+            {
+              "fontFamily": "Neue Montreal",
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "fontStretch": "normal",
+              "ascentOverride": "100%",
+              "src": [
+                "file:./assets/fonts/PP Neue Montreal/PPNeueMontreal-Regular.woff2"
+              ]
+            }
+          ]
+        },
+        {
+          "fontFamily": "PP Writer",
+          "name": "PP Writer",
+          "slug": "pp-writer",
+          "fontFace": [
+            {
+              "fontFamily": "PP Writer",
+              "fontWeight": "300",
+              "fontStyle": "normal",
+              "fontStretch": "normal",
+              "ascentOverride": "100%",
+              "src": [
+                "file:./assets/fonts/PP Writer/PPWriter-Light.otf"
+              ]
+            },
+            {
+              "fontFamily": "PP Writer",
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "fontStretch": "normal",
+              "ascentOverride": "100%",
+              "src": [
+                "file:./assets/fonts/PP Writer/PPWriter-Regular.otf"
+              ]
+            },
+            {
+              "fontFamily": "PP Writer",
+              "fontWeight": "700",
+              "fontStyle": "normal",
+              "fontStretch": "normal",
+              "ascentOverride": "100%",
+              "src": [
+                "file:./assets/fonts/PP Writer/PPWriter-Bold.otf"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "custom": {
+      "font": {
+        "body": "var(--wp--preset--font-family--pp-writer)",
+        "heading": "var(--wp--preset--font-family--neue-montreal)"
+      },
+      "fluid-scale": "((100vw - 375px) / 905)",
+      "desktop": {
+        "font-size": {
+          "body-1": "22px",
+          "body-2": "1rem",
+          "display-1": "64px",
+          "heading-1": "56px",
+          "heading-2": "48px",
+          "heading-3": "42px",
+          "heading-4": "36px",
+          "heading-5": "32px",
+          "heading-6": "28px"
+        }
+      },
+      "mobile": {
+        "font-size": {
+          "body-1": "16px",
+          "body-2": "0.9375rem",
+          "display-1": "40px",
+          "heading-1": "36px",
+          "heading-2": "32px",
+          "heading-3": "28px",
+          "heading-4": "24px",
+          "heading-5": "20px",
+          "heading-6": "18px"
+        }
+      },
+      "line-height": {
+        "body-1": "normal",
+        "body-2": "normal",
+        "display-1": "normal",
+        "heading-1": "normal",
+        "heading-2": "normal",
+        "heading-3": "normal",
+        "heading-4": "normal",
+        "heading-5": "normal",
+        "heading-6": "normal"
+      },
+      "letterSpacing": {
+        "body-1": "normal",
+        "body-2": "normal",
+        "display-1": "normal",
+        "heading-1": "normal",
+        "heading-2": "normal",
+        "heading-3": "normal",
+        "heading-4": "normal",
+        "heading-5": "normal",
+        "heading-6": "normal"
+      }
+    },
+    "blocks": {
+      "core/heading": {},
+      "core/button": {
+        "color": {
+          "palette": [
+            {
+              "name": "black",
+              "slug": "black",
+              "color": "#000000"
+            },
+            {
+              "name": "White",
+              "slug": "white",
+              "color": "#ffffff"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

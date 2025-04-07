@@ -11,7 +11,8 @@ use Timber\Timber;
 use Tktk\Setup;
 use Tktk\Enqueue;
 use Tktk\TimberContext;
-use Tktk\Styleguide;
+use Tktk\CustomRoutes;
+use Tktk\StyleguideRoutes;
 
 // Load Composer dependencies
 if ( file_exists(__DIR__ . '/vendor/autoload.php') ) {
@@ -30,4 +31,5 @@ if ( class_exists(Timber::class) ) {
 new Setup();
 new Enqueue( 'tktk' );
 new TimberContext();
-new Styleguide();
+new CustomRoutes();
+new StyleguideRoutes();

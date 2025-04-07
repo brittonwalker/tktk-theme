@@ -5,10 +5,17 @@
 import barba from '@barba/core';
 import { gsap, Power2 } from 'gsap';
 
+import AppController from './AppController';
+
 export default class PageTransition {
-  constructor(experience) {
-    this.experience = experience;
+  constructor() {
+    this.experience = AppController.instance;
     this.transitionEl = document.querySelector('.page-transition');
+
+    if (!this.transitionEl) {
+      return;
+    }
+
     this.text = this.transitionEl.querySelector('.page-transition__loading');
     document.addEventListener('DOMContentLoaded', () => this.init());
   }
@@ -20,9 +27,7 @@ export default class PageTransition {
         const isAdminLink = document.getElementById('wpadminbar')
           ? document.getElementById('wpadminbar').contains(el)
           : false;
-        const isLogout = el
-          .getAttribute('href')
-          .includes('wp-login.php?action=logout');
+        const isLogout = el.getAttribute('href').includes('wp-login.php?action=logout');
 
         return isAdminLink || isLogout;
       },
@@ -30,29 +35,33 @@ export default class PageTransition {
         {
           name: 'default-transition',
           leave: () => {
-            gsap.set(this.transitionEl, { xPercent: 0, width: 0 });
+            gsap.set(this.transitionEl, { yPercent: 0, top: '100%', height: 0 });
 
             return gsap.to(this.transitionEl, {
-              width: '100vw',
+              top: 0,
+              height: '100vh',
               duration: 1,
               ease: Power2.easeInOut,
-              onComplete: () => {
-                this.experience.menu.out();
-              },
+              onComplete: () => {},
             });
           },
 
           afterEnter: () => {
             gsap.to(this.transitionEl, {
-              xPercent: 100,
+              yPercent: -100,
+              height: 0,
               duration: 1,
               delay: 0.5,
               ease: Power2.easeInOut,
+              onComplete: () => {
+                gsap.set(this.transitionEl, { clearProps: true });
+              },
             });
           },
 
           after: () => {
             this.experience.init();
+            this.experience.menuPush.close();
             window.scrollTo(0, 0);
           },
         },

@@ -1,2 +1,5 @@
 .content-wrapper {
+  min-height: calc(100vh - var(--wp-admin--admin-bar--height, 0));
+  position: relative;
+  z-index: 10;
 }

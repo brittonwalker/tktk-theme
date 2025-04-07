@@ -1,9 +1,27 @@
 {# This file demonstrates using most of the index.twig template and modifying 
    just a small part. See `search.twig` for an example of another approach #}
 
-{% extends "index.twig" %}
+{% extends "base.twig" %}
 
 {% block content %}
-  <h3>This is my archive</h3>
-  {{ parent() }}
+<div class="container pt-40">
+  <h1 class="text-[45px] font-bold leading-[90%] mb-16">{{ title }}</h1>
+  <div class="work-grid grid grid-cols-3 gap-8 pb-40">
+    {% for post in posts %}
+      <a class="w-full !no-underline" href="{{ post.link }}">
+        <div class="w-full aspect-[576/383] bg-gray-300">
+          <img 
+            src="{{ post.thumbnail.src }}" 
+            alt="{{ post.title }}"
+            class="w-full h-full object-cover object-center"
+            onerror='this.onerror=null; this.src="{{ theme.link ~ "/assets/images/default-thumbnail.jpg" }}";'
+          />
+        </div>
+        <div class="mt-4 space-y-3">
+          <p>{{ post.title }}</p>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</div>
 {% endblock %}

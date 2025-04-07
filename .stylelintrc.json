@@ -1,33 +1,35 @@
 {
-	"extends": [
-		"@wordpress/stylelint-config"
-	],
-	"rules": {
-		"no-invalid-position-at-import-rule": null,
-		"at-rule-empty-line-before": null,
-		"declaration-no-important": true,
-		"no-descending-specificity": null,
-		"rule-empty-line-before": null,
-		"declaration-property-unit-allowed-list": null,
-		"selector-class-pattern": [
-			"^([a-z]+(-[a-z]+)*)(__[a-z]+(-[a-z]+)*)?(--[a-z0-9]+(-[a-z0-9]+)*)?$",
-			{
-				"message": "Class names should follow the BEM convention: block, block__element, block--modifier, block__element--modifier. Modifiers can include numbers."
-			}
-		],
-		"at-rule-no-unknown": [
-			true,
-			{
-				"ignoreAtRules": [
-					"config",
-					"tailwind",
-					"apply",
-					"layer",
-					"variants",
-					"responsive",
-					"screen"
-				]
-			}
-		]
-	}
+  "extends": [
+    "@wordpress/stylelint-config"
+  ],
+  "rules": {
+    "no-invalid-position-at-import-rule": null,
+    "at-rule-empty-line-before": null,
+    "declaration-no-important": true,
+    "no-descending-specificity": null,
+    "rule-empty-line-before": null,
+    "declaration-property-unit-allowed-list": null,
+    "selector-class-pattern": [
+      "^([a-z]+(-[a-z0-9]+)*)(__[a-z]+(-[a-z0-9]+)*)?(--[a-z0-9]+(-[a-z0-9]+)*)?$|^[a-z]+(-[a-z0-9]+)+$",
+      {
+        "message": "Class names should follow the BEM convention or be a standalone kebab-case name with optional numbers."
+      }
+    ],
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "config",
+          "tailwind",
+          "apply",
+          "layer",
+          "variants",
+          "responsive",
+          "screen",
+          "utility",
+          "theme"
+        ]
+      }
+    ]
+  }
 }

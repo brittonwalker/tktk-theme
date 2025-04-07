@@ -1,0 +1,48 @@
+.styleguide-page {
+  @apply flex;
+}
+
+.styleguide-sidebar {
+  @apply w-[250px] h-screen p-6 sticky top-page font-sans border-r border-gray-300 text-left shadow-2xl;
+
+  button {
+    @apply py-2 block w-full;
+  }
+}
+
+.styleguide-content {
+  @apply flex-1 bg-gray-100 p-4 lg:p-8 lg:pt-14 lg:pb-28;
+}
+
+.styleguide-list {
+  @apply text-gray-600;
+  .styleguide-list__button {
+    @apply hover:cursor-pointer text-left flex justify-between items-center w-full text-black font-semibold;
+    svg {
+      @apply transform -rotate-90 transition-transform duration-200 ease-in-out;
+    }
+  }
+  .styleguide-list__button--expanded {
+    svg {
+      @apply transform rotate-0;
+    }
+  }
+  .styleguide-list__sublist {
+    @apply hidden pl-2;
+    &.styleguide-list__sublist--active {
+      @apply block;
+    }
+  }
+
+  li {
+    @apply py-2;
+  }
+
+  a {
+    @apply no-underline hover:text-black transition-colors duration-200 ease-in-out;
+  }
+}
+
+.styleguide__title {
+  @apply border-b-2 border-gray-300 text-[32px] pb-2;
+}

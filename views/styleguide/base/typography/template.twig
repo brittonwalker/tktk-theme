@@ -1,0 +1,145 @@
+{% extends "base-styleguide.twig" %}
+
+{% set text = 'Text: <strong>bold</strong>, <em>italic</em>, <a href="#!">linked</a>, <code>code</code>, <kbd>kbd</kbd>, <small>small</small>, super<sup>script</sup>, sub<sub>script</sub>.' %}
+{% set characters = 'ABCČĆDĐEFGHIJKLMNOPQRSŠTUVWXYZŽabcčćdđefghijklmnopqrsštuvwxyzžАБВГҐДЂЕЁЄЖЗЅИІЇЙЈКЛЉМНЊОПРСТЋУЎФХЦЧЏШЩЪЫЬЭЮЯабвгґдђеёєжзѕиіїйјклљмнњопрстћуўфхцчџшщъыьэюяΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩαβγδεζηθικλμνξοπρστυφχψωάΆέΈέΉίϊΐΊόΌύΰϋΎΫΏĂÂÊÔƠƯăâêôơư1234567890‘?’“!”(%)[#]{@}/&<-+÷×=>®©$€£¥¢:;,.*' %}
+
+{% block content %}
+<h1 class="heading-1 mb-12">{{ title }}</h1>
+<div class="flex flex-col gap-16">
+  {% set fonts = data.fonts %}
+  <div class="flex flex-col gap-12">
+    <div class="flex flex-col gap-4">
+      <h2 class="styleguide__title">{{ fonts.title }}</h2>
+      <div class="max-w-[660px]">
+        <p>{{ fonts.description }}</p>
+      </div>
+    </div>
+    <div class="flex flex-col gap-12">
+      <div class="grid grid-cols-2 gap-12">
+        {% for item in fonts.items %}
+          <div class="font-section flex flex-col gap-4 p-4 border border-gray-300 rounded">
+            <h2 class="font-bold">{{ item.name }}: {{ item.fontName }}</h2>
+            <div class="bg-black aspect-square text-white max-w-[200px] flex flex-col justify-center items-center text-center leading-[100%]">
+              <h2 class="{{ item.className }} text-[112px]">Ag</h2>
+            </div>
+            <div class="characters flex flex-col gap-4">
+              <div class="{{ item.className }} max-w-[960px] break-words">
+                <span class="font-semibold">Characters:</span>
+                <p>{{ characters}}</p>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="flex flex-col gap-4">
+        <p>Tokens:</p>
+        <div class="tokens flex flex-col gap-8">
+          <table class="w-full text-left">
+            <thead>
+              <tr>
+                <th class="py-2">Name</th>
+                <th class="py-2">Tailwind Class</th>
+                <th class="py-2">CSS Variable</th>
+                <th class="py-2">Value</th>
+              </tr>
+            </thead>
+            <tbody class="">
+              {% for item in fonts.items %}
+                <tr>
+                  <td class="border-t border-gray-300 py-2">{{ item.name }}</td>
+                  <td class="border-t border-gray-300 py-2">.{{ item.className }}</td>
+                  <td class="border-t border-gray-300 py-2"><code>{{ item.tokens.variable }}</code></td>
+                  <td class="border-t border-gray-300 py-2" data-value="{{ item.tokens.variable }}">...</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% set headings = data.headings %}
+  <div class="flex flex-col gap-12">
+    <div class="flex flex-col gap-4">
+      <h2 class="styleguide__title">{{ headings.title }}</h2>
+      <p>{{ headings.description }}</p>
+    </div>
+    <div class="flex flex-col gap-4 font-heading">
+      {% for heading in headings.items %}
+        <h2 class="{{ heading.className }}">Why Visual Hierarchy Matters</h2>
+      {% endfor %}
+    </div>
+    <div class="tokens flex flex-col gap-8">
+      <table class="w-full text-left">
+        <thead>
+          <tr>
+            <th class="py-2">Name</th>
+            <th class="py-2">Tailwind Class</th>
+            <th class="py-2">Mobile</th>
+            <th class="py-2">Desktop</th>
+          </tr>
+        </thead>
+        <tbody class="">
+          {% for item in headings.items %}
+            {% set tokens = item.tokens %}
+            {% set json_vars = {
+              desktop: tokens.desktop,
+              mobile: tokens.mobile
+            } %}
+            <tr data-type='{{ json_vars|json_encode|raw }}'>
+              <td class="border-t border-gray-300 py-2">{{ item.name }}</td>
+              <td class="border-t border-gray-300 py-2">.{{ item.className }}</td>
+              <td class="border-t border-gray-300 py-2" data-mobile></td>
+              <td class="border-t border-gray-300 py-2" data-desktop></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  {% set body = data.body %}
+  <div class="flex flex-col gap-12">
+    <div class="flex flex-col gap-4">
+      <h2 class="styleguide__title">{{ body.title }}</h2>
+      <p>{{ body.description }}</p>
+    </div>
+    <div class="flex flex-col gap-4 [&>*+*]:mt-8">
+      {% for item in body.items %}
+        <div class="max-w-[960px] flex flex-col gap-4 font-body">
+          <p class="font-sans">{{ item.name }}:</p>
+          <p class="{{ item.className }}">{{ item.content|default(item.name) }}</p>
+          <p class="{{ item.className }}">{{ text }}</p>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="tokens flex flex-col gap-8">
+      <table class="table-auto w-full text-left">
+        <thead>
+          <tr>
+            <th class="p-2 border border-gray-300">Name</th>
+            <th class="p-2 border border-gray-300">Tailwind Class</th>
+            <th class="p-2 border border-gray-300">Mobile</th>
+            <th class="p-2 border border-gray-300">Desktop</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in body.items %}
+            {% set tokens = item.tokens %}
+            {% set json_vars = {
+              desktop: tokens.desktop,
+              mobile: tokens.mobile
+            } %}
+            <tr data-type='{{ json_vars|json_encode|raw }}'>
+              <td class="p-2 border border-gray-300">{{ item.name }}</td>
+              <td class="p-2 border border-gray-300">.{{ item.className }}</td>
+              <td class="p-2 border border-gray-300" data-mobile></td>
+              <td class="p-2 border border-gray-300" data-desktop></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+  </div>
+</div>
+{% endblock %}

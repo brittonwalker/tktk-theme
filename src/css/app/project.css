@@ -1,0 +1,140 @@
+.project-content {
+  --content-width: calc(9 / 12 * 100%);
+  --text-width: calc(6 / 8 * 100%);
+  --heading-width: calc(2 / 8 * 100%);
+  --sidebar-width: calc(3 / 12 * 100%);
+
+  @apply pt-14 pb-8 lg:pb-[120px] relative;
+
+  &::before {
+    @apply absolute top-0 left-[calc(var(--sidebar-width)+56px/2)] w-[1px] h-full bg-black lg:content-[''];
+  }
+
+  .sidebar-item {
+    @apply m-0 w-full my-8 lg:w-[calc(var(--sidebar-width))] max-w-full lg:m-0 lg:absolute;
+  }
+
+  p {
+    @apply mb-4;
+  }
+
+  > * {
+    @apply ml-auto mt-4 w-full lg:w-[calc(var(--content-width)-56px)] max-w-full;
+  }
+
+  > :first-child {
+    @apply mt-0;
+  }
+
+  .wp-block-image {
+    @apply my-8 lg:my-28 hover:cursor-pointer;
+    img {
+      @apply w-full;
+    }
+    &.is-style-float-right {
+      @apply float-right mt-4;
+      width: calc((100% - 740px) / 2 - 16px);
+    }
+    &.is-style-float-left {
+      @apply float-right;
+    }
+    &.alignfull {
+      @apply w-full;
+    }
+  }
+
+  :last-child {
+    @apply mb-0;
+  }
+
+  > h2:first-child {
+    @apply mt-0 intro-type;
+  }
+}
+
+.grouped-section {
+  @apply lg:flex gap-4 lg:gap-8 mb-8;
+
+  .wp-block-heading {
+    @apply max-w-full mb-4;
+  }
+
+  .grouped-section__body {
+    > * {
+      @apply mb-[1rem];
+    }
+    :last-child {
+      @apply mb-0;
+    }
+    @apply lg:w-[var(--text-width)] max-w-full ml-auto;
+  }
+}
+
+.project-header {
+  @apply relative z-10;
+  .project-header__content {
+    @apply h-full min-h-[80vh] mt-auto pb-8 absolute top-0 left-0 right-0 z-10 bg-[#DFDCD2] flex flex-col;
+  }
+}
+
+.project-sidebar__info {
+  @apply flex flex-col gap-4 mb-8;
+}
+
+.project-sidebar__expandable {
+  @apply bg-[#EFFFE1] p-8;
+}
+
+.project-slider {
+  @apply fixed bg-black top-0 left-0 w-full bottom-0 z-50 overflow-scroll pointer-events-none opacity-0;
+
+  .project-slider__content {
+    @apply w-full h-full opacity-100 flex flex-col relative;
+  }
+  .project-slider__slide {
+    @apply mx-auto overflow-hidden w-screen h-screen flex-shrink-0 flex flex-col justify-center items-center;
+
+    img {
+      @apply w-full h-full;
+    }
+  }
+  .project-slider__close {
+    @apply absolute p-6 top-page right-0 text-white text-2xl hover:cursor-pointer z-50;
+  }
+}
+
+.project-slider__thumbnail-container {
+  position: fixed;
+  top: 50%;
+  right: 100px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.project-slider__thumbnail {
+  width: 60px;
+  height: auto;
+  cursor: pointer;
+  opacity: 0.6;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.project-slider__thumbnail:hover,
+.project-slider__thumbnail.active {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.blur-bg {
+  @apply fixed top-0 left-0 w-full h-full z-20 pointer-events-none transition-all duration-300;
+
+  &.active {
+    @apply backdrop-blur-xs;
+  }
+}

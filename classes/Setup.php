@@ -60,6 +60,7 @@ class Setup {
 
 				register_nav_menus([
 					'primary'   => __('Primary Menu', 'tktk'),
+          'secondary' => __('Secondary Menu', 'tktk'),
 					'footer'    => __('Footer Menu', 'tktk'),
 					'social'    => __('Social Menu', 'tktk'),
 				]);

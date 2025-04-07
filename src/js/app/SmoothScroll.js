@@ -10,4 +10,12 @@ export default class SmoothScroll {
   getLenisInstance() {
     return this.lenis;
   }
+
+  stopScroll() {
+    this.lenis.stop();
+  }
+
+  startScroll() {
+    this.lenis.start();
+  }
 }

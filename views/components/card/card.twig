@@ -1,0 +1,12 @@
+<a class="card" href="{{ post.link }}">
+  <div class="card__image-wrapper">
+    <img
+      src="{{ post.thumbnail.src|default(theme.link ~ '/assets/images/default-thumbnail.jpg') }}"
+      alt="{{ post.title }}"
+      class="card__image"
+    />
+  </div>
+  <div class="card__content">
+    <p>{{ post.title }}</p>
+  </div>
+</a>

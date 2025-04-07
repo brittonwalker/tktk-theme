@@ -5,9 +5,14 @@
 export default class Banner {
   constructor() {
     this.banners = [...document.querySelectorAll('.banner')];
-    if (!this.banners) {
+
+    if (!this.banners.length) {
+      console.warn(
+        'No banners found, to use Banner.js you need uncomment the banner in the base.twig'
+      );
       return;
     }
+
     this.init();
   }
 

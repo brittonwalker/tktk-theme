@@ -1,0 +1,44 @@
+@theme {
+  --font-body: var(--wp--custom--font--body);
+  --font-heading: var(--wp--custom--font--heading);
+
+  --text-heading-1-desktop: var(--wp--custom--desktop--font-size--heading-1);
+  --text-heading-2-desktop: var(--wp--custom--desktop--font-size--heading-2);
+  --text-heading-3-desktop: var(--wp--custom--desktop--font-size--heading-3);
+  --text-heading-4-desktop: var(--wp--custom--desktop--font-size--heading-4);
+  --text-heading-5-desktop: var(--wp--custom--desktop--font-size--heading-5);
+  --text-heading-6-desktop: var(--wp--custom--desktop--font-size--heading-6);
+
+  --text-heading-1-mobile: var(--wp--custom--mobile--font-size--heading-1);
+  --text-heading-2-mobile: var(--wp--custom--mobile--font-size--heading-2);
+  --text-heading-3-mobile: var(--wp--custom--mobile--font-size--heading-3);
+  --text-heading-4-mobile: var(--wp--custom--mobile--font-size--heading-4);
+  --text-heading-5-mobile: var(--wp--custom--mobile--font-size--heading-5);
+  --text-heading-6-mobile: var(--wp--custom--mobile--font-size--heading-6);
+
+  --leading-heading-1: var(--wp--custom--line-height--heading-1);
+  --leading-heading-2: var(--wp--custom--line-height--heading-2);
+  --leading-heading-3: var(--wp--custom--line-height--heading-3);
+  --leading-heading-4: var(--wp--custom--line-height--heading-4);
+  --leading-heading-5: var(--wp--custom--line-height--heading-5);
+  --leading-heading-6: var(--wp--custom--line-height--heading-6);
+
+  --tracking-heading-1: var(--wp--custom--letter-spacing--heading-1);
+  --tracking-heading-2: var(--wp--custom--letter-spacing--heading-2);
+  --tracking-heading-3: var(--wp--custom--letter-spacing--heading-3);
+  --tracking-heading-4: var(--wp--custom--letter-spacing--heading-4);
+  --tracking-heading-5: var(--wp--custom--letter-spacing--heading-5);
+  --tracking-heading-6: var(--wp--custom--letter-spacing--heading-6);
+
+  --text-body-1-desktop: var(--wp--custom--desktop--font-size--body-1);
+  --text-body-2-desktop: var(--wp--custom--desktop--font-size--body-2);
+
+  --text-body-1-mobile: var(--wp--custom--mobile--font-size--body-1);
+  --text-body-2-mobile: var(--wp--custom--mobile--font-size--body-2);
+
+  --leading-body-1: var(--wp--custom--line-height--body-1);
+  --leading-body-2: var(--wp--custom--line-height--body-2);
+
+  --tracking-body-1: var(--wp--custom--letter-spacing--body-1);
+  --tracking-body-2: var(--wp--custom--letter-spacing--body-2);
+}
