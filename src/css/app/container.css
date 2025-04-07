@@ -1,5 +1,11 @@
 @utility container {
   margin-inline: auto;
-  width: calc(100% - 32px);
+  width: calc(100% - 64px);
   max-width: 1440px;
+  @apply w-[calc(100%-32px)] lg:w-[calc(100%-64px)];
+}
+
+@utility container-half {
+  width: calc(100% - 32px);
+  max-width: 720px;
 }

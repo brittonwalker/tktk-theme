@@ -15,8 +15,7 @@
 			<div class="page-transition__loading">{{ site.title }}</div>
 		</div>
 
-		<section id="content" role="main" class="content-wrapper" data-barba="container" data-barba-namespace="home">
-			{% if title %}<h1>{{title}}</h1>{% endif %}
+		<main id="content" role="main" class="content-wrapper" data-barba="container" data-barba-namespace="home">
 			<div class="wrapper {{sidebar_class}}">
 				{% block content %}
 					Sorry, no content
@@ -27,7 +26,9 @@
 					{{sidebar}}
 				</aside>
 			{% endif %}
-		</section>
+		</main>
+
+		<div class="blur-bg"></div>
 
 		{% block footer %}
 			{% include 'components/footer.twig' %}

@@ -10,15 +10,7 @@
   .hero-split__text {
     @apply sm:text-center lg:text-left flex items-center order-2 lg:order-1;
   }
-  &--img-left {
-    /* #{ $self }__img {
-			@apply order-1 lg:order-1;
-		}
-		#{ $self }__text {
-			@apply order-2 lg:order-2;
-		} */
-  }
   .hero-split__heading {
-    @apply text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl;
+    @apply font-heading heading-1;
   }
 }

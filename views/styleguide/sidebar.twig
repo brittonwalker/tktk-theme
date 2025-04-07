@@ -1,0 +1,21 @@
+<div class="styleguide-sidebar">
+  <a class="styleguide-sidebar__title mb-4 block" href="/styleguide" >Style Guide</a>
+  <ol>
+    {% for item in styleguide_menu %}
+      <li class="styleguide-list">
+        {% if item.children %}
+          <button class="styleguide-list__button">{{ item.title }} <span>{% include 'svg/chevron-down.twig' %}</span></button>
+          <ol class="styleguide-list__sublist">
+            {% for child in item.children %}
+              <li>
+                <a href="{{ child.link }}">{{ child.title }}</a>
+              </li>
+            {% endfor %}
+          </ol>
+        {% else %}
+          <a href="{{ item.link }}">{{ item.title }}</a>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ol>
+</div>

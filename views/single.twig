@@ -5,11 +5,11 @@
 		<article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
 			<div class="article-header">
 				<div class="article-header__bg">
-					<img src="https://source.unsplash.com/1600x900">
+					{# <img src="{{ theme.link }}/assets/images/placeholder.jpg" alt="Hero image"> #}
 				</div>
 				<div class="article-header__content">
 					<div class="container">
-						<h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">{{ post.title }}</h1>
+						<h1 class="font-heading heading-1">{{ post.title }}</h1>
 						<p class="blog-author">
 							<span>By</span><a href="{{post.author.path}}"> {{ post.author.name }} </a><span>&bull;</span> <time datetime="{{ post.date|date('Y-m-d H:i:s') }}">{{ post.date }}</time>
 						</p>
@@ -26,7 +26,7 @@
 		</article>
 		<section class="related-posts bg-gray-100 pt-8 pb-12">
 			<div class="container mb-6">
-				<p class="text-4xl">Read more</p>
+				<p class="font-heading heading-3 font-bold">Read more</p>
 			</div>
 			{% include 'components/post-grid.twig' with { columns: 3 } %}
 		</section>

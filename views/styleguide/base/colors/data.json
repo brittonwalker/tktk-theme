@@ -1,0 +1,139 @@
+{
+  "typography": {
+    "title": "Typography",
+    "description": "Typography is the art and technique of arranging type to make written language legible, readable, and visually appealing when displayed.",
+    "sections": [
+      {
+        "name": "Font Family",
+        "description": "The font family used in the design.",
+        "className": "font-family"
+      }
+    ]
+  },
+  "headings": {
+    "title": "Headings",
+    "description": "The font styles for headings.",
+    "items": [
+      {
+        "name": "Heading 1",
+        "className": "heading-1",
+        "tokens": {
+          "desktop": {
+            "fontSize": "2.5rem",
+            "lineHeight": "3rem"
+          },
+          "mobile": {
+            "fontSize": "2rem",
+            "lineHeight": "2.5rem"
+          }
+        }
+      },
+      {
+        "name": "Heading 2",
+        "className": "heading-2",
+        "tokens": {
+          "desktop": {
+            "fontSize": "2.5rem",
+            "lineHeight": "3rem"
+          },
+          "mobile": {
+            "fontSize": "2rem",
+            "lineHeight": "2.5rem"
+          }
+        }
+      },
+      {
+        "name": "Heading 3",
+        "className": "heading-3",
+        "tokens": {
+          "desktop": {
+            "fontSize": "2.5rem",
+            "lineHeight": "3rem"
+          },
+          "mobile": {
+            "fontSize": "2rem",
+            "lineHeight": "2.5rem"
+          }
+        }
+      },
+      {
+        "name": "Heading 4",
+        "className": "heading-4",
+        "tokens": {
+          "desktop": {
+            "fontSize": "2.5rem",
+            "lineHeight": "3rem"
+          },
+          "mobile": {
+            "fontSize": "2rem",
+            "lineHeight": "2.5rem"
+          }
+        }
+      },
+      {
+        "name": "Heading 5",
+        "className": "heading-5",
+        "tokens": {
+          "desktop": {
+            "fontSize": "2.5rem",
+            "lineHeight": "3rem"
+          },
+          "mobile": {
+            "fontSize": "2rem",
+            "lineHeight": "2.5rem"
+          }
+        }
+      },
+      {
+        "name": "Heading 6",
+        "className": "heading-6",
+        "tokens": {
+          "desktop": {
+            "fontSize": "2.5rem",
+            "lineHeight": "3rem"
+          },
+          "mobile": {
+            "fontSize": "2rem",
+            "lineHeight": "2.5rem"
+          }
+        }
+      }
+    ]
+  },
+  "body": {
+    "title": "Body",
+    "description": "The font styles for body copy.",
+    "items": [
+      {
+        "name": "Body 1",
+        "className": "body-1",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt est et tortor aliquam, id finibus nisi laoreet.",
+        "tokens": {
+          "desktop": {
+            "fontSize": "2.5rem",
+            "lineHeight": "3rem"
+          },
+          "mobile": {
+            "fontSize": "2rem",
+            "lineHeight": "2.5rem"
+          }
+        }
+      },
+      {
+        "name": "Body 2",
+        "className": "body-2",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt est et tortor aliquam, id finibus nisi laoreet.",
+        "tokens": {
+          "desktop": {
+            "fontSize": "2.5rem",
+            "lineHeight": "3rem"
+          },
+          "mobile": {
+            "fontSize": "2rem",
+            "lineHeight": "2.5rem"
+          }
+        }
+      }
+    ]
+  }
+}

@@ -11,7 +11,7 @@
 .headroom {
   will-change: transform;
   transition: transform 200ms linear;
-  @apply fixed w-full py-4 bg-black text-white z-20 top-0;
+  @apply fixed w-full py-4 bg-transparent text-white mix-blend-difference z-20 top-0;
 
   &.headroom--pinned {
     transform: translateY(0%);
@@ -28,49 +28,63 @@
   }
 
   .header__nav {
-    @apply hidden lg:block;
+    @apply lg:flex gap-12;
   }
 
   .header__nav-list {
-    @apply flex;
+    @apply hidden lg:flex gap-12 ml-auto;
   }
 
   .header__nav-link {
-    @apply px-4;
-    &:last-of-type {
-      @apply pr-0;
+    @apply no-underline;
+  }
+  .menu-item {
+    @apply flex flex-col justify-center;
+  }
+
+  .header__logo {
+    @apply mr-auto;
+    svg {
+      @apply h-6 lg:h-[30px];
     }
   }
 }
 
 .menu {
-  @apply pointer-events-none bg-black md:hidden fixed top-0 bottom-0 w-full transform duration-500 ease-in-out translate-x-[100%] z-10 lg:hidden;
-  .menu-item {
-    @apply mb-4;
-    &:last-of-type {
-      @apply mb-0;
-    }
-  }
+  @apply bg-black text-white fixed w-full top-page pointer-events-none p-6 z-30 h-fit invisible;
+  transform: translateY(-100%);
+}
+
+.menu__close {
+  @apply flex justify-end;
 }
 
 .menu__inner {
-  @apply p-4 space-y-2 sm:px-3 flex flex-col justify-end h-full;
-}
+  @apply flex flex-col relative container mx-auto;
 
-.menu__trigger {
-  @apply flex lg:hidden transform transition-all duration-300;
-}
-
-.menu-active {
-  @apply overflow-hidden;
-
-  .menu__trigger {
-    @apply -rotate-45;
+  .mobile-nav-item {
+    @apply my-6 no-underline;
+    font-size: clamp(1.5rem, 5vw, 64px);
+  }
+  .mobile-nav-item:first-of-type {
+    @apply mt-0;
   }
 
-  .menu {
-    @apply pointer-events-auto;
+  ul {
+    @apply mt-16;
   }
+}
+
+.menu__close-button {
+  @apply hover:cursor-pointer absolute top-0 right-0;
+}
+
+.menu__logo {
+  @apply w-14 lg:w-28;
+}
+
+.menu-trigger {
+  @apply flex flex-col justify-center ml-0;
 }
 
 .mobile-nav-item {

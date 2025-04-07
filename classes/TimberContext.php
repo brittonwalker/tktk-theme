@@ -15,8 +15,8 @@ class TimberContext {
 	 * Add the `timber_context` filters.
 	 */
 	public function __construct() {
-		
 		add_filter( 'timber/context', array( __CLASS__, 'add_menus' ) );
+		add_filter('timber/post/classmap', [__CLASS__, 'add_class_map']);
 	}
 
 	/**
@@ -32,4 +32,11 @@ class TimberContext {
 		return $context;
 	}
 
+	/**
+	 * Register custom post class map
+	 */
+	public static function add_class_map($classmap) {
+		$classmap['project'] = \Tktk\Project::class; // Assign "project" post type to Project class
+		return $classmap;
+	}
 }

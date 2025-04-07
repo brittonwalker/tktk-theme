@@ -1,7 +1,7 @@
 .post-tease {
   @apply rounded-3xl overflow-hidden border border-black;
   .post-tease__card {
-    @apply flex flex-col;
+    @apply flex flex-col no-underline;
   }
   .post-tease__title {
     @apply text-gray-900 text-xl font-medium mb-2;

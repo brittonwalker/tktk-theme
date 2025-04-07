@@ -1,0 +1,38 @@
+{% extends "base-styleguide.twig" %}
+
+{% block content %}
+<h1 class="heading-1 mb-12">{{ title }}</h1>
+
+<div class="max-w-prose mb-12">
+  <p class="mb-6">
+    This page shows the default output of WYSIWYG content — the kind of stuff you'd see in article or detail pages. It includes common HTML elements like headings, paragraphs, lists, blockquotes, images, and more, all styled to match our base typography and layout system.
+  </p>
+  <p class="\">
+    These styles are applied automatically to content areas coming from the CMS, without any custom markup or blocks. The goal is to provide clean, consistent formatting out of the box, so editors can focus on content and everything still looks good. 
+  </p>
+</div>
+
+<h2 class="styleguide__title mb-12">Example Content</h2>
+
+{% include "styleguide/base/wysiwyg/content.twig" %}
+
+{# <h2 class="styleguide__title mb-12">Development Reference</h2>
+
+<div class="code-block">
+	{% include 'components/code-block/header.twig' with { title: '' } %}
+	<div class="code-block__preview">
+		{% include 'components/modal/modal.twig' %}
+	</div>
+	<div class="code-block__container code-block__hidden">
+		<div class="code-block__wrapper">
+			<div class="code-block__highlight">
+				<div class="code-block__btn js-lang-tab active" data-lang-btn="css">CSS</div>
+				<button type="button" name="copy code to clipboard" class="code-block__btn js-copy-btn">Copy</button>
+			</div>
+		</div>
+		<pre data-src="{{ theme.link }}/src/js/app/Modal.js"></pre>
+		<pre class="active" data-lang="css" data-src="{{ theme.link }}/src/css/app/article.css"></pre>
+	</div>
+</div> #}
+
+{% endblock %}

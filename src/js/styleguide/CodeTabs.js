@@ -22,9 +22,7 @@ export default class CodeTabs {
       const copyBtn = block.querySelector('.js-copy-btn');
       const toggleSwitch = block.querySelector('.toggle-switch');
       this.handleToggleSwitch(block, toggleSwitch);
-      copyBtn.addEventListener('click', () =>
-        this.copyToClipBoard(block, copyBtn)
-      );
+      copyBtn.addEventListener('click', () => this.copyToClipBoard(block, copyBtn));
     });
   }
 

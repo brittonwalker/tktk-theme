@@ -1,0 +1,24 @@
+@layer components {
+  .btn {
+    @apply flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md md:py-4 md:text-lg md:px-10;
+    &.btn--dark {
+      @apply text-white bg-black hover:bg-gray-800;
+    }
+    &.btn--light {
+      @apply text-black bg-gray-200 hover:bg-gray-100;
+    }
+  }
+
+  .card {
+    @apply w-full !no-underline;
+    & &__image-wrapper {
+      @apply w-full aspect-[576/383] bg-gray-300;
+    }
+    & &__image {
+      @apply w-full h-full object-cover object-center;
+    }
+    & &__content {
+      @apply mt-4 space-y-3;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{% block html_head_container %}
+
+{% include 'html-header.twig' %}
+	{% block head %}
+	{% endblock %}
+	</head>
+{% endblock %}
+
+	<body class="{{body_class}}" data-template="base.twig" data-barba="wrapper">
+		<a class="skip-link screen-reader-text" href="#content">{{ _e( 'Skip to content') }}</a>
+
+    <div class="styleguide-page">
+      {% include 'styleguide/sidebar.twig' %}
+      <div class="styleguide-content">
+        <main id="content" role="main" class="content-wrapper" data-barba="container" data-barba-namespace="home">
+          <div class="wrapper {{sidebar_class}}">
+            <div class="container font-sans">
+            {% block content %}
+              Sorry, no content
+            {% endblock %}
+            </div>
+          </div>
+          {% if sidebar %}
+            <aside class="layout-sidebar">
+              {{sidebar}}
+            </aside>
+          {% endif %}
+        </main>
+      </div>
+    </div>
+
+		{% block footer %}
+			{{ function('wp_footer') }}
+		{% endblock %}
+	</body>
+</html>

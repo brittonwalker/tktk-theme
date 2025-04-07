@@ -1,0 +1,150 @@
+{
+  "fonts": {
+    "title": "Fonts",
+    "description": "Typography is the art and technique of arranging type to make written language legible, readable, and visually appealing when displayed.",
+    "items": [
+      {
+        "name": "Font Headings",
+        "fontName": "PP Neue Montreal",
+        "className": "font-heading",
+        "tokens": {
+          "variable": "--font-heading"
+        }
+      },
+      {
+        "name": "Font Body",
+        "fontName": "PP Writer",
+        "className": "font-body",
+        "tokens": {
+          "variable": "--font-body"
+        }
+      }
+    ]
+  },
+  "headings": {
+    "title": "Headings",
+    "description": "The font styles for headings.",
+    "items": [
+      {
+        "name": "Heading 1",
+        "className": "heading-1",
+        "tokens": {
+          "desktop": {
+            "fontSize": "--text-heading-1-desktop",
+            "lineHeight": "--leading-heading-1"
+          },
+          "mobile": {
+            "fontSize": "--text-heading-1-mobile",
+            "lineHeight": "--leading-heading-1"
+          }
+        }
+      },
+      {
+        "name": "Heading 2",
+        "className": "heading-2",
+        "tokens": {
+          "desktop": {
+            "fontSize": "--text-heading-2-desktop",
+            "lineHeight": "--leading-heading-2"
+          },
+          "mobile": {
+            "fontSize": "--text-heading-2-mobile",
+            "lineHeight": "--leading-heading-2"
+          }
+        }
+      },
+      {
+        "name": "Heading 3",
+        "className": "heading-3",
+        "tokens": {
+          "desktop": {
+            "fontSize": "--text-heading-3-desktop",
+            "lineHeight": "--leading-heading-3"
+          },
+          "mobile": {
+            "fontSize": "--text-heading-3-mobile",
+            "lineHeight": "--leading-heading-3"
+          }
+        }
+      },
+      {
+        "name": "Heading 4",
+        "className": "heading-4",
+        "tokens": {
+          "desktop": {
+            "fontSize": "--text-heading-4-desktop",
+            "lineHeight": "--leading-heading-4"
+          },
+          "mobile": {
+            "fontSize": "--text-heading-4-mobile",
+            "lineHeight": "--leading-heading-4"
+          }
+        }
+      },
+      {
+        "name": "Heading 5",
+        "className": "heading-5",
+        "tokens": {
+          "desktop": {
+            "fontSize": "--text-heading-5-desktop",
+            "lineHeight": "--leading-heading-5"
+          },
+          "mobile": {
+            "fontSize": "--text-heading-5-mobile",
+            "lineHeight": "--leading-heading-5"
+          }
+        }
+      },
+      {
+        "name": "Heading 6",
+        "className": "heading-6",
+        "tokens": {
+          "desktop": {
+            "fontSize": "--text-heading-6-desktop",
+            "lineHeight": "--leading-heading-6"
+          },
+          "mobile": {
+            "fontSize": "--text-heading-6-mobile",
+            "lineHeight": "--leading-heading-6"
+          }
+        }
+      }
+    ]
+  },
+  "body": {
+    "title": "Body",
+    "description": "The font styles for body copy.",
+    "items": [
+      {
+        "name": "Body 1",
+        "className": "body-1",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt est et tortor aliquam, id finibus nisi laoreet.",
+        "tokens": {
+          "desktop": {
+            "fontSize": "--text-body-1-desktop",
+            "lineHeight": "--leading-body-1"
+          },
+          "mobile": {
+            "fontSize": "--text-body-1-mobile",
+            "lineHeight": "--leading-body-1"
+          }
+        }
+      },
+      {
+        "name": "Body 2",
+        "className": "body-2",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt est et tortor aliquam, id finibus nisi laoreet.",
+        "tokens": {
+          "desktop": {
+            "fontSize": "--text-body-2-desktop",
+            "lineHeight": "--leading-body-2"
+          },
+          "mobile": {
+            "fontSize": "--text-body-2-mobile",
+            "lineHeight": "--leading-body-2"
+          }
+        }
+      }
+    ]
+  }
+}
